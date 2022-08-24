@@ -7,7 +7,11 @@ class AuthForm extends StatefulWidget {
 }
 
 class _AuthFormState extends State<AuthForm> {
+  //============================================
   final _formkey = GlobalKey<FormState>();
+  final _email = '';
+  final _password = '';
+  //============================================
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -20,7 +24,12 @@ class _AuthFormState extends State<AuthForm> {
               key: _formkey,
             )
             child: Column(
-              children: [],
+              children: [
+                TextFormField(
+                  keyboardType: TextInputType.emailAddress;
+                  key: ValueKey('email'),
+                )
+              ],
             )
           )
         ]
